@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        {% csrf_token %}
+        <input type="search" name="searchname">
+        <input type="submit" value="search">
+    </form>
+    <table >
+    <th>
+        
+        <td>student id</td>
+        <td>name</td>
+        <td>email</td>
+        <td>result</td>
+    </th>
+    {% for i in st %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.stu_id}}</td>
+        <td>{{i.stu_name}}</td>
+        <td>{{i.stu_email}}</td>
+        <td>{{i.stu_result}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
