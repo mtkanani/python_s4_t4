@@ -4,7 +4,7 @@ step 1
 >python manage.py startapp songapp 
 >after setting.py and install_app songapp
 >go to model and create model
->after go to admin
+>after go to admin and register your model >>{admin.site.regester([model])}
 >D:\206\songproject> python manage.py makemigrations
 >D:\206\songproject> python manage.py migrate
 >D:\206\songproject>python manage.py createsuperuser
